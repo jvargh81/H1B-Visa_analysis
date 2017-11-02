@@ -3,8 +3,10 @@
 **The H1B Visa data set contains data regarding acceptance of the visa in a particular Year and States/places (These are the data we are analyzing).**
 
 *_Columns in the data set are as shown below :_*
-|CASE_STATUS|EMPLOYER_NAME|SOC_NAME|JOB_TITLE|FULL_TIME_POSITION|PREVAILING_WAGE|YEAR|WORKSITE|lon|lat|
-|-----------|:-----------:|:------:|:-------:|:----------------:|--------------:|---:|-------:|--:|--:|
+
+|CASE_STATUS  |EMPLOYER_NAME|SOC_NAME|JOB_TITLE|FULL_TIME_POSITION|PREVAILING_WAGE|YEAR|WORKSITE|lon| lat |
+|---|:-----------:|:-----------:|:--------------:|:------------:|:-----------:|:-----------:|:--------------:|:------------:|--------------:|
+
 
 
 ### Tools
