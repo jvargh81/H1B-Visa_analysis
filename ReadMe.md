@@ -99,10 +99,35 @@ h1b["CASE_STATUS"].value_counts()
 ```
 **Note :** _Since there is no much diference in the data,droping the NaNs_
 
+
+**_- Segregating data for each year based on the outcome of each application**
+
+
+_Taking only the columns required into the year data frame and then filtering it, based on the status. _
+```python
+# Cleaning the data for Analysing Approvals and rejections
+year = h1b.drop(h1b.columns[[1,2,3,4,5,7]], axis=1)
+year = year[year["CASE_STATUS"] == "CERTIFIED"]
+Certified_per_year = year["YEAR"].value_counts()
+```
+**Note** _Similar operation done for each status_
+
+#### Plot Graph
+
+**_Ploting scatter plot based on the status for each year._**
+
+```python
+labels1 = 'INVALIDATED', 'PENDING', 'WITHDRAWN','CERTIFIED-WITHDRAWN', 'REJECTED','DENIED','CERTIFIED'
+
+plt.plot(I_per_year,'ws', P_per_year,'bs', W_per_year,'ys', CW_per_year,'gs',R_per_year,'cs',Denied_per_year,'ms',Certified_per_year,'rs')
+plt.legend(('INVALIDATED', 'PENDING', 'WITHDRAWN','CERTIFIED-WITHDRAWN', 'REJECTED','DENIED','CERTIFIED'))
+plt.show()
+```
+
+_Below is the graph for the analysis_
+
+ <img src="graph1.jpg" width="300"/>
  
-
-
-
 
 ### Conclusion :
 
