@@ -30,7 +30,8 @@ _Below snipet will help to understand, how we can read a csv file._
 h1b = pd.read_csv("h1b_kaggle.csv")
 ```
 
-*How to plot graphs of the data analyzed.*
+      
+#### *How to plot graphs of the data analyzed?*
 
 _We have to first collect some data from the csv file, so that we can input
 our data to the graph. _
@@ -188,7 +189,7 @@ _Sorting the x-axis i.e the states for proper alignment of data_
 h = sorted(set(h1b1))
 ```
 
-_Even the data of all the states count are sorted_
+_Plot graph for all the states_
 
 ```python
 objects = h
@@ -231,7 +232,7 @@ most individuals are selected throughout these years(2011-2016).
 
 
 **Kaggle Site:**
-https://www.kaggle.com/jerrinv/iris-data-set
+https://www.kaggle.com/jerrinv/h1b-visa-analysis
 
 
 ### Author
