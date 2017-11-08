@@ -50,6 +50,8 @@ In this example, the graph ploted are scatterplot and line graphs.Both graphs re
 
 #### Analyzing the columns and rows using the Apis head and tail
 
+_it gives irst few columns and rows in the tat frame_
+
 ```python
 h1b.head()
 ```
@@ -68,6 +70,8 @@ h1b.tail()
 ```
 
 #### Deleting unwanted columns for Analysis
+
+_Scince all the columns that we wanted to delete are in different order, so we are spliting it into two comands._
 
 ```python
 h1b = h1b.iloc[:,1:]
@@ -100,6 +104,8 @@ h1b["CASE_STATUS"].value_counts()
 
 _Taking only the columns required into the year data frame and then filtering it, based on the status._
 
+_Analyzing only the data required, so removing unwanted data i.e the columns.Checking only for the status required and then taking its count to analyse and plot the graph._
+
 ```python
 # Cleaning the data for Analysing Approvals and rejections
 year = h1b.drop(h1b.columns[[1,2,3,4,5,7]], axis=1)
@@ -111,6 +117,8 @@ Certified_per_year = year["YEAR"].value_counts()
 #### Plot Graph
 
 **_Ploting scatter plot based on the status for each year._**
+ 
+_Analyzing all the data using matplotlibs plot api._
 
 ```python
 labels1 = 'INVALIDATED', 'PENDING', 'WITHDRAWN','CERTIFIED-WITHDRAWN', 'REJECTED','DENIED','CERTIFIED'
@@ -130,6 +138,8 @@ _Below is the graph for the analysis_
 
 #### Seperating state and city name from the column worksite
 
+_The loop runs through the column and stores the state name from the data of worksite._
+
 ```python
 h1b1 = []
 h1 = []
@@ -146,7 +156,7 @@ _In order to analyse the data, we have to convert the list to a data frame._
 
 ```python
 df = pd.DataFrame({'col':h1b1})
-# printing the dataframe on to the console
+# printing the dataframe on to the console to check the data.
 df['col'].value_counts()
 
 ```
@@ -165,13 +175,16 @@ data_frame = pd.concat(data_frame, axis=1)
 
 
 ```python
+# Analyse all the case status except for the NAN
 data_frame = data_frame.dropna()
+# removing unwanted columns.
 states = data_frame.drop(data_frame.columns[[1,2,3,4,5,6,7]], axis=1)
 
 ``` 
 
 **_Filtering the data frame based on the status of each application and states_**
 
+_Filtering only based on status and storing them into respective dataframes._
 ```python
 certified_states = states[states["CASE_STATUS"] == "CERTIFIED"]
 denied_states = states[states["CASE_STATUS"] == "DENIED"]
