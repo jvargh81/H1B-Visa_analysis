@@ -1,6 +1,8 @@
 # H1B Visa Data_Set Analysis
              
-            
+<img src="h1b.jpg">
+
+
 _The H1B Visa data set contains data regarding acceptance of applicants in a particular Year and States/places (These are the data we are analyzing)._
 
 
@@ -130,7 +132,7 @@ plt.show()
 
 _Below is the graph for the analysis_
 
- <img src="graph1.jpg" width="300"/>
+ <img src="graph1.jpg">
 
 
 
@@ -230,7 +232,7 @@ plt.show()
 
 _Below graph is the analysis of the above data_
 
-<img src="graph2.jpg" width="300"/>
+<img src="graph2.jpg">
 
 
 
